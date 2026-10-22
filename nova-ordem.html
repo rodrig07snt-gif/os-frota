@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nova Ordem de Manutenção | Olavo Tur</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f4f7;
+        }
+
+        header {
+            background: #1f2937;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .botoes {
+            display: flex;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        button {
+            flex: 1;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .salvar {
+            background: #2563eb;
+            color: white;
+        }
+
+        .voltar {
+            background: #e5e7eb;
+            color: #111827;
+        }
+
+        @media (max-width: 500px) {
+            .botoes {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Nova Ordem de Manutenção</h1>
+        <p>Olavo Tur</p>
+    </header>
+
+    <div class="container">
+
+        <div class="card">
+
+            <form id="formOrdem">
+
+                <label for="data">
+                    Data
+                </label>
+
+                <input
+                    type="date"
+                    id="data"
+                    name="data"
+                    required
+                >
+
+
+                <label for="frota">
+                    Frota
+                </label>
+
+                <input
+                    type="text"
+                    id="frota"
+                    name="frota"
+                    placeholder="Digite o veículo ou número da frota"
+                    required
+                >
+
+
+                <label for="motorista">
+                    Motorista
+                </label>
+
+                <input
+                    type="text"
+                    id="motorista"
+                    name="motorista"
+                    placeholder="Nome do motorista"
+                >
+
+
+                <label for="classificacao">
+                    Classificação
+                </label>
+
+                <select
+                    id="classificacao"
+                    name="classificacao"
+                    required
+                >
+
+                    <option value="">
+                        Selecione
+                    </option>
+
+                    <option value="Corretiva">
+                        Corretiva
+                    </option>
+
+                    <option value="Preventiva">
+                        Preventiva
+                    </option>
+
+                    <option value="Detectiva">
+                        Detectiva
+                    </option>
+
+                </select>
+
+
+                <label for="status">
+                    Status
+                </label>
+
+                <select
+                    id="status"
+                    name="status"
+                    required
+                >
+
+                    <option value="Aberta">
+                        Aberta
+                    </option>
+
+                    <option value="Em andamento">
+                        Em andamento
+                    </option>
+
+                    <option value="Concluída">
+                        Concluída
+                    </option>
+
+                </select>
+
+
+                <label for="descricao">
+                    Descrição da Manutenção
+                </label>
+
+                <textarea
+                    id="descricao"
+                    name="descricao"
+                    placeholder="Descreva o serviço ou problema identificado"
+                    required
+                ></textarea>
+
+
+                <div class="botoes">
+
+                    <button
+                        type="button"
+                        class="voltar"
+                        onclick="window.location.href='index.html'">
+
+                        Voltar
+
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="salvar">
+
+                        Salvar Ordem
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        // Coloca automaticamente a data de hoje
+
+        const hoje =
+            new Date().toISOString().split('T')[0];
+
+        document.getElementById('data').value = hoje;
+
+
+        // Por enquanto apenas testa o botão salvar
+
+        document
+            .getElementById('formOrdem')
+            .addEventListener('submit', function(event) {
+
+                event.preventDefault();
+
+                alert(
+                    'Ordem de Manutenção preenchida com sucesso!'
+                );
+
+            });
+
+    </script>
+
+</body>
+
+</html>
