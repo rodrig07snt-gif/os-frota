@@ -3,15 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>OS Frota</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f4f7;
+        }
+
+        header {
+            background: #1f2937;
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        header p {
+            margin: 6px 0 0;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .botao {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: left;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+        }
+
+        .botao:hover {
+            background: #e5e7eb;
+        }
+
+        .nova-os {
+            background: #2563eb;
+            color: white;
+        }
+
+        .nova-os:hover {
+            background: #1d4ed8;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>OS Frota</h1>
-    <p>Sistema de Ordem de Serviço</p>
+    <header>
+        <h1>OS Frota</h1>
+        <p>Sistema de Gestão de Ordens de Serviço</p>
+    </header>
 
-    <button>Nova Ordem de Serviço</button>
+    <div class="container">
+
+        <div class="menu">
+
+            <button class="botao nova-os">
+                + Nova Ordem de Serviço
+            </button>
+
+            <button class="botao">
+                📋 Ordens de Serviço
+            </button>
+
+            <button class="botao">
+                🚌 Frota
+            </button>
+
+        </div>
+
+    </div>
 
 </body>
 </html>
