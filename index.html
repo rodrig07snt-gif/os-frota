@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>OS Frota</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Olavo Tur</title>
 
     <style>
+
         * {
             box-sizing: border-box;
         }
@@ -50,14 +54,20 @@
             display: block;
             width: 100%;
             padding: 20px;
+
             border: none;
             border-radius: 10px;
+
             font-size: 18px;
             font-weight: bold;
+
             cursor: pointer;
             text-align: left;
+
             background: white;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+
+            box-shadow:
+                0 2px 8px rgba(0,0,0,0.10);
         }
 
         .botao:hover {
@@ -72,35 +82,63 @@
         .nova-os:hover {
             background: #1d4ed8;
         }
+
     </style>
+
 </head>
 
 <body>
 
     <header>
-        <h1>OS Frota</h1>
-        <p>Sistema de Gestão de Ordens de Serviço</p>
+
+        <h1>Olavo Tur</h1>
+
+        <p>
+            Sistema de Gestão de Ordens de Manutenção
+        </p>
+
     </header>
+
 
     <div class="container">
 
         <div class="menu">
 
-            <button class="botao nova-os">
-                + Nova Ordem de Serviço
+
+            <!-- NOVA ORDEM -->
+
+            <button
+                class="botao nova-os"
+                onclick="window.location.href='nova-ordem.html'">
+
+                + Nova Ordem de Manutenção
+
             </button>
 
-            <button class="botao">
-                📋 Ordens de Serviço
-            </button>
+
+            <!-- ORDENS -->
 
             <button class="botao">
+
+                📋 Ordens de Manutenção
+
+            </button>
+
+
+            <!-- FROTA -->
+
+            <button class="botao">
+
                 🚌 Frota
+
             </button>
+
 
         </div>
 
     </div>
 
+
 </body>
+
 </html>
